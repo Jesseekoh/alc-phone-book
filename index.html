@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- bootstrap -->
+  <link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+  <!-- my own stylesheet -->
+  <link rel="stylesheet" type="text/css" href="./styles/">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Title</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <h1 class="text-center">ALC Address book</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Add new contact</h2>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="name" placeholder="Contact's name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="phone">Phone:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="phone" placeholder="Contact's Phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="mobile">Mobile:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="mobile" placeholder="Contact's Mobile">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="address">Address:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="address" placeholder="Contact's address">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:
+            </label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" id="email" placeholder="Contact's Email">
+              </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="save" class="btn btn-success btn-lg">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h2>Contacts</h2>
+      </div>
+    </div>
+  </div>
+  <!-- jquery -->
+  <script type="text/javascript" src="./scripts/jquery-3.2.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+</body>
+
+</html>
