@@ -23,32 +23,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Title</a>
+        <a class="navbar-brand" href="#">ALC Phone-Book</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-        <form class="navbar-form navbar-left" role="search">
+        
+        <form class="navbar-form navbar-left col-md-6" role="search">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
+        
       </div>
       <!-- /.navbar-collapse -->
     </div>
@@ -62,7 +48,7 @@
         <h2>Add new contact</h2>
         <form class="form-horizontal">
           <div class="form-group">
-            <label class="control-label col-sm-2" for="name">Name:</label>
+            <label class="control-label col-sm-2" for="name" required>Name:</label>
             <div class="col-sm-8">
               <input type="text" class="form-control" id="name" placeholder="Contact's name">
             </div>
@@ -70,7 +56,7 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="phone">Phone:</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="phone" placeholder="Contact's Phone">
+              <input type="phone" class="form-control" id="phone" placeholder="Contact's Phone">
             </div>
           </div>
           <div class="form-group">
@@ -101,6 +87,8 @@
       </div>
       <div class="col-md-6">
         <h2>Contacts</h2>
+        <ul id="contact-list">
+        </ul>
       </div>
     </div>
   </div>
@@ -108,6 +96,7 @@
   <script type="text/javascript" src="./scripts/jquery-3.2.1.min.js"></script>
   <!-- bootstrap js -->
   <script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./scripts/main.js"></script>
 </body>
 
 </html>
