@@ -18,3 +18,14 @@ li {
 /** {
   outline: 1px solid grey;
 }*/
+
+.contacts{
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.options{
+  display: none;
+  justify-content: space-between;
+  padding-top: 20px;
+}
