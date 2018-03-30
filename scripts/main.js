@@ -131,7 +131,7 @@ $('#editModal').on('shown.bs.modal',function(){
   console.log(details);
   //populate form with existing contact details
  $('#nameEdit').val(details.name);
-  $('phoneEdit').val(details.phone);
+  $('#phoneEdit').val(details.phone);
   $('#mobileEdit').val(details.mobile);
   $('#emailEdit').val(details.email);
   $('#addressEdit').val(details.address);
