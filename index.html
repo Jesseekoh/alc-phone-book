@@ -9,7 +9,7 @@
   <!-- bootstrap -->
   <link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
   <!-- my own stylesheet -->
-  <link rel="stylesheet" type="text/css" href="./styles/">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 
 <body>
@@ -27,14 +27,12 @@
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
-        
         <form class="navbar-form navbar-left col-md-6" role="search">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
-        
       </div>
       <!-- /.navbar-collapse -->
     </div>
@@ -43,52 +41,75 @@
     <h1 class="text-center">ALC Address book</h1>
   </div>
   <div class="container">
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add New Contact</button>
+
+  </div>
+  <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <h2>Add new contact</h2>
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="name" required>Name:</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="name" placeholder="Contact's name">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="phone">Phone:</label>
-            <div class="col-sm-8">
-              <input type="phone" class="form-control" id="phone" placeholder="Contact's Phone">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="mobile">Mobile:</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="mobile" placeholder="Contact's Mobile">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="address">Address:</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="address" placeholder="Contact's address">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Email:
-            </label>
-            <div class="col-sm-8">
-              <input type="email" class="form-control" id="email" placeholder="Contact's Email">
-              </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-              <button type="save" class="btn btn-success btn-lg">Save</button>
-            </div>
-          </div>
-        </form>
-      </div>
       <div class="col-md-6">
         <h2>Contacts</h2>
         <ul id="contact-list">
         </ul>
+      </div>
+      <div class="col-md-6 contact-details">
+        <h2>Contact Details</h2>
+        <h3>Name:</h3>
+        <h3>Mobile:</h3>
+        <h3>Phone:</h3>
+        <h3>Email:</h3>
+        <h3>Address:</h3>
+
+      </div>
+    </div>
+  </div>
+    <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Enter Contact Details</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="name">Name:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="name" required="" placeholder="Contact's name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="phone">Phone:</label>
+              <div class="col-sm-8">
+                <input type="phone" class="form-control" id="phone" placeholder="Contact's Phone">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="mobile">Mobile:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="mobile" placeholder="Contact's Mobile">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="address">Address:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="address" placeholder="Contact's address">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Email:
+              </label>
+              <div class="col-sm-8">
+                <input type="email" class="form-control" id="email" placeholder="Contact's Email">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+           <button type="save" class="btn btn-success btn-lg" id="submit">Save</button>
+          <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Cancel</button>
+        </div>
       </div>
     </div>
   </div>
