@@ -23,6 +23,8 @@ var contactList = [
 
   }
 ];
+//temporary holder of current viewed contact
+var details;
 
 //select #contact-list and assign it to var list
 var list = $('#contact-list');
@@ -87,7 +89,7 @@ function displayDetails(contactId){
 
   console.log('i got id',contactId);
   //getting the value of the index of contactList and assigning it to details
-  var details = contactList[contactId];
+  details = contactList[contactId];
   console.log(details);
 
   //assigning details properties to the contact details field
@@ -102,3 +104,67 @@ function displayDetails(contactId){
   $('#delete').attr('data-index',contactId)
   $('.options').css('display','flex');
 }
+
+$('#delete').on('click',function(){
+  console.log($(this));
+  var contactIndex = $(this).attr('data-index');
+  console.log(contactIndex)
+  console.log(contactList[contactIndex])
+  //deleting the clicked contact with present index
+  contactList.splice(contactIndex,1);
+  //assigning the contact details field to empty strings
+   $('#contactName').text('Name: ');
+  $('#contactPhone').text('Phone: ');
+  $('#contactMobile').text('Mobile: ');
+  $('#contactEmail').text('Email: ');
+  $('#contactAddress').text('Address: ');
+
+  //hide the edit and delete buttons
+ $('.options').css('display','none');  
+
+  list.empty();
+  showContacts();
+})
+
+$('#editModal').on('shown.bs.modal',function(){
+  
+  console.log(details);
+  //populate form with existing contact details
+ $('#nameEdit').val(details.name);
+  $('phoneEdit').val(details.phone);
+  $('#mobileEdit').val(details.mobile);
+  $('#emailEdit').val(details.email);
+  $('#addressEdit').val(details.address);
+
+}); 
+
+$('#submitEdit').on('click',function(){
+
+  //get editted data and save it current contact
+  //check if name field is empty
+  if($('#nameEdit').val() === ''){
+    return alert('Please enter a name')
+  }
+
+  //getting the information from the form fields and assigning them to contact properties
+  details.name = $('#nameEdit').val();
+  details.phone = $('#phoneEdit').val();
+  details.mobile = $('#mobileEdit').val();
+  details.address = $('#addressEdit').val();
+  details.email = $('#emailEdit').val();
+
+  //empties contactList
+  list.empty();
+ //empties the form
+  $('#nameEdit').val('');
+  $('#phoneEdit').val('');
+  $('#mobileEdit').val('');
+  $('#addressEdit').val('');
+  $('#emailEdit').val('');
+  showContacts();
+
+  //get index of current contact
+  var contactIndex = contactList.indexOf(details);
+  displayDetails(contactIndex);
+})
+
