@@ -2,22 +2,22 @@
 var contactList = [
   {
     name: 'jesse',
-    phone: '090987',
-    mobile: '090988',
-    address: 'schjd',
-    email: 'dalj',
-
-  },{
-    name: 'john',
-    phone: 'fj',
-    mobile: 'fcg',
+    phone: '090987456767',
+    mobile: '09098856745',
     address: '',
     email: '',
 
   },{
+    name: 'john',
+    phone: '090244222252',
+    mobile: '08077722662',
+    address: '',
+    email: 'jay@mail.com',
+
+  },{
     name: 'jane',
-    phone: 'f',
-    mobile: 'fdf',
+    phone: '+23307663722',
+    mobile: '',
     address: '',
     email: '',
 
